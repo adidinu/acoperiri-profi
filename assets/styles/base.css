@@ -42,6 +42,11 @@ img {
 	margin: 0 auto;
 	padding: 0 48px;
 }
+@media only screen and (max-width: 990px) {
+	.page-width {
+		padding: 0 24px;
+	}
+}
 a {
 	text-decoration: none;
 }
@@ -61,18 +66,6 @@ header h1 {
 	width: 220px;
 	height: auto;
 }
-.logo * {
-	transition: all 0.3s ease;
-}
-.logo .s0 {
-	fill: #f1813f;
-}
-.logo .s1 {
-	fill: #5fcad4;
-}
-.top .img-cont:hover .logo .s0 {
-	fill: red;
-}
 .top {
 	display: flex;
 	align-items: center;
@@ -91,11 +84,8 @@ header h1 {
 	height: 100%;
 }
 .nav-wrapper {
-	background: rgb(226, 120, 34);
+	background: #e27822;
 	transition: all 0.3s ease;
-}
-.nav-wrapper:hover {
-	background: rgb(9, 126, 185);
 }
 .nav .sub-menu {
 	display: none;
@@ -105,6 +95,7 @@ header h1 {
 	height: auto;
 	width: max-content;
 	background: #222;
+	z-index: 2;
 }
 .nav .sub-menu.show {
 	display: flex;
@@ -119,6 +110,22 @@ header h1 {
 .nav .sub-menu a {
 	color: white;
 }
+.nav .js-open-menu a,
+.nav .js-open-menu,
+.nav .js-open-menu i::before {
+	font-size: 20px;
+	transition: all 0.2s ease;
+}
+.nav .js-menu-rel:nth-of-type(2) .js-open-menu a {
+	margin-right: 8px;
+}
+.nav .js-open-menu:hover {
+	background: white;
+}
+.nav .js-open-menu:hover a,
+.nav .js-open-menu:hover i::before {
+	color: #222;
+}
 .nav .js-menu-rel {
 	position: relative;
 }
@@ -127,6 +134,11 @@ header h1 {
 	display: flex;
 	justify-content: flex-start;
 	width: 100%;
+}
+.nav.page-width {
+	position: relative;
+	left: -24px;
+	width: calc(100% + 24px);
 }
 .nav-wrapper ul {
 	display: flex;
@@ -137,9 +149,6 @@ header h1 {
 	color: white;
 	padding: 8px 24px;
 	cursor: pointer;
-}
-.nav-wrapper ul .js-menu-rel:first-of-type li {
-	padding-left: 0;
 }
 footer {
 	background: #222;

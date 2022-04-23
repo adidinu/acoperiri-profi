@@ -1,0 +1,119 @@
+main .wrapper {
+	padding-top: 40px;
+	margin-bottom: 60px;
+}
+.products .product-card {
+	display: flex;
+	margin-bottom: 12px;
+}
+.products .product-image {
+	position: relative;
+	cursor: pointer;
+}
+.products .product-card .product-title {
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: 100%;
+	padding: 8px 16px;
+	background: #e27822;
+	font-size: 18px;
+	font-weight: medium;
+	text-align: center;
+	color: white;
+}
+.products .product-image a:after {
+	content: '';
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+}
+.products .grid-sizer {
+	width: calc(25% - 12px);
+}
+.products .grid-item {
+	width: calc(25% - 12px);
+}
+.products .grid-item--width2 {
+	width: calc(50% - 12px);
+}
+.products .content {
+	width: 100%;
+}
+.products .product-image img {
+	width: 100%;
+	object-fit: cover;
+}
+.products.grid {
+	max-width: calc(80% - 24px);
+}
+.wrapper {
+	position: relative;
+}
+.wrapper .menu {
+	position: absolute;
+	right: -24px;
+	top: 40px;
+	height: auto;
+	background: #e27822;
+	width: calc(20% + 24px);
+	padding: 16px;
+	border: 1px solid #733d1e;
+	border-radius: 6px;
+}
+.wrapper .menu li,
+.wrapper .menu h3 {
+	color: white;
+}
+.wrapper .menu h3 {
+	margin-bottom: 12px;
+	padding-bottom: 12px;
+	position: relative;
+}
+.wrapper .menu h3::after {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	left: 0;
+	width: calc(100%);
+	height: 2px;
+	background: #733d1e;
+}
+.menu li {
+	position: relative;
+	padding-left: 24px;
+	margin-bottom: 8px;
+}
+.menu .product-list > li:before {
+	content: '\f5aa';
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: 'FontAwesome';
+}
+.menu .product-list > ul li {
+	margin-left: 24px;
+}
+.menu .product-list > ul {
+	margin-bottom: 12px;
+}
+.menu .product-list > ul:last-of-type,
+.menu .product-list > ul:last-of-type li:last-of-type {
+	margin-bottom: 0;
+}
+.menu .product-list > ul li:before {
+	content: '\f0a9';
+	position: absolute;
+	top: 0;
+	left: 0;
+	font-family: 'FontAwesome';
+}
+@media only screen and (max-width: 990px) {
+	.products .grid-sizer,
+	.products .grid-item,
+	.products .grid-item--width2 {
+		width: 100%;
+	}
+}
