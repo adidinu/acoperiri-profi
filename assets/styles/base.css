@@ -21,6 +21,7 @@ body {
 	-webkit-font-smoothing: antialiased;
 	-moz-osx-font-smoothing: grayscale;
 	color: #222;
+	line-height: 28px;
 }
 *,
 *:after,
@@ -88,10 +89,10 @@ header h1 {
 	transition: all 0.3s ease;
 }
 .nav .sub-menu {
-  transform: scaleY(0);
-  transform-origin: top;
+	transform: scaleY(0);
+	transform-origin: top;
 	display: flex;
-  flex-direction: column;
+	flex-direction: column;
 	justify-content: center;
 	align-items: flex-start;
 	position: absolute;
@@ -100,29 +101,33 @@ header h1 {
 	height: auto;
 	width: max-content;
 	background: #4799a0;
-	z-index: 2;
-  transition: transform 0.3s ease;
+	z-index: 4;
+	transition: transform 0.3s ease;
 }
 .nav .sub-menu.show {
-  transform:scaleY(100%);
+	transform: scaleY(100%);
 }
-.nav .js-open-menu a{
-  color:white;
+.nav .js-open-menu a {
+	color: white;
 }
-.nav .js-open-menu{
-  position: relative;
+.nav .js-open-menu {
+	position: relative;
 }
-.nav .js-open-menu a:after{
-  content:'';
-  position: absolute;
-  left:0;
-  top:0;
-  width:100%;
-  height:100%;
+.nav .sub-menu li:hover {
+	background: #d17327;
+}
+.nav .js-open-menu a:after {
+	content: '';
+	position: absolute;
+	left: 0;
+	top: 0;
+	width: 100%;
+	height: 100%;
 }
 .nav-wrapper .nav .sub-menu.show li {
 	padding: 8px 24px;
 	width: 100%;
+	transition: background-color 0.2s ease-in;
 }
 .nav .sub-menu a {
 	color: white;
@@ -153,9 +158,7 @@ header h1 {
 	width: 100%;
 }
 .nav.page-width {
-	position: relative;
-	left: -24px;
-	width: calc(100% + 24px);
+	width: 100%;
 }
 .nav-wrapper ul {
 	display: flex;
