@@ -3,6 +3,7 @@ main {
 }
 main .about .about-title {
 	margin-bottom: 24px;
+  font-size: 28px;
 }
 main .about .about-section:not(:first-of-type) .about-title {
 	margin-top: 8px;
@@ -10,8 +11,12 @@ main .about .about-section:not(:first-of-type) .about-title {
 main .about .about-section:last-of-type .about-title {
 	margin-top: 18px;
 }
+main .about ul{
+  margin-bottom:30px;
+}
 main .about .about-text {
 	margin-bottom: 18px;
+  line-height:24px;
 }
 main .about li {
 	position: relative;
