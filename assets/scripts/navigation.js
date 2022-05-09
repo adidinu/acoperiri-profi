@@ -2,12 +2,10 @@ const menus = document.querySelectorAll('.js-open-menu');
 const navWrapper = document.querySelector('.nav-wrapper');
 const subMenus = document.querySelectorAll('.sub-menu');
 
-navWrapper.addEventListener('mouseover', (e) => {
-	if (!e.target.closest('.js-open-menu') && !e.target.closest('.sub-menu')) {
-		subMenus.forEach((subMenu) => {
-			subMenu.classList.remove('show');
-		});
-	}
+navWrapper.addEventListener('mouseleave', (e) => {
+  subMenus.forEach((subMenu) => {
+    subMenu.classList.remove('show');
+  });
 });
 
 menus.forEach((menu) => {
@@ -25,3 +23,5 @@ menus.forEach((menu) => {
 		}
 	});
 });
+
+
