@@ -79,7 +79,7 @@ header h1 {
   display:none;
 }
 .mobile-nav .mobile-popup{
-  position: absolute;
+  position: fixed;
   left:0;
   top:0;
   height:100%;
@@ -102,7 +102,7 @@ header h1 {
 }
 body.overlay:after{
   content: '';
-  position: absolute;
+  position: fixed;
   top:0;
   left:0;
   width:100vw;
