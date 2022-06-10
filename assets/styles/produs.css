@@ -81,12 +81,18 @@ main .wrapper {
 .product-info .contact a{
   display:inline-flex;
   width:max-content;
-  padding: 0 8px;
+  padding: 4px 8px;
   font-weight: bold;
-  font-size: 18px;
   border: 1px solid #222;
   border-radius: 8px;
-  color:inherit;
+  color: white;
+  font-size: 20px;
+  background:#222;
+  transition: all 0.3s ease-out;
+}
+.product-info .contact a:hover{
+  background:white;
+  color:#222;
 }
 @media only screen and (max-width: 990px){
   .product{
