@@ -51,6 +51,14 @@ main .wrapper {
   justify-content: center;
   width: max-content;
 }
+.contact .input-wrapper.textarea > div{
+  display:flex;
+  flex-flow: column nowrap;
+  gap: 8px;
+}
+.contact .char-count{
+  opacity:0.8;
+}
 .contact-wrapper:after{
   content:'';
   width: 2px;
