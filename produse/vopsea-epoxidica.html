@@ -12,6 +12,8 @@
 		/>
 		<script src="https://unpkg.com/masonry-layout@4/dist/masonry.pkgd.min.js"></script>
 		<script src="/assets/scripts/navigation.js" defer></script>
+    <link rel="stylesheet" href="https://unpkg.com/swiper@8/swiper-bundle.min.css" />
+		<script src="https://unpkg.com/swiper@8/swiper-bundle.min.js"></script>
 		<title>Acoperiri Profesionale</title>
 	</head>
 	<body>
@@ -90,7 +92,20 @@
         <div class="product-wrapper">
           <div class="product">
             <div class="product-img">
-              <img src="/assets/poze/Vopsea-Epoxidica.jpg" alt="" />
+              <div class="swiper">
+                <div class="swiper-nav">
+                  <div class="swiper-button-prev"></div>
+                  <div class="swiper-button-next"></div>
+                </div>
+                <div class="swiper-wrapper">
+                  <div class="swiper-slide">
+                    <img src="/assets/poze/Vopsea-Epoxidica.jpg" alt="" />
+                  </div>
+                  <div class="swiper-slide">
+                    <img src="/assets/poze/Vopsea-Epoxidica-2.jpg" alt="" />
+                  </div>
+                </div>
+              </div>
             </div>
             <div class="product-info">
               <div class="text">
@@ -109,11 +124,6 @@
                   <a href="/contact.html">Contactati-ne!</a>
                 </div>
               </div>
-            </div>
-          </div>
-          <div class="other-images">
-            <div class="product-img">
-              <img src="/assets/poze/Vopsea-Epoxidica-2.jpg" alt="" />
             </div>
           </div>
         </div>
@@ -142,5 +152,17 @@
 				</div>
 			</div>
 		</footer>
+    <script>
+      const prodSwiper = new Swiper(`.swiper`, {
+            slidesPerView: 1,
+            spaceBetween: 8,
+            autoHeight: true,
+            loop: true,
+            navigation:{
+              "nextEl": `.swiper-nav .swiper-button-next`,
+              "prevEl": `.swiper-nav .swiper-button-prev`
+            }
+          });
+    </script>
 	</body>
 </html>
