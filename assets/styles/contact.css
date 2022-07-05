@@ -144,6 +144,7 @@ main .wrapper {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 24px;
+  resize:vertical;
   max-width: 100%!important;
 }
 .contact .textarea > div:not(.error-count){
