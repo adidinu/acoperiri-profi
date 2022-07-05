@@ -144,6 +144,10 @@ main .wrapper {
   padding-top: 10px;
   padding-bottom: 10px;
   line-height: 24px;
+  max-width: 100%!important;
+}
+.contact .textarea > div:not(.error-count){
+  max-width: 100%!important;
 }
 .contact .input-wrapper label{
   font-weight:bold;
